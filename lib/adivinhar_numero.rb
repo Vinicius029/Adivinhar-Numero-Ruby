@@ -1,4 +1,4 @@
-require_relative 'inicializar.rb'
+require_relative 'rendering.rb'
 require_relative 'sorteio.rb'
 
 class AdivinharNumero
@@ -7,7 +7,7 @@ class AdivinharNumero
 
     def initialize
         system('cls')
-        Inicializar.animacao(2)
+        Rendering.animacao(2)
         sleep(3)
         @numero = Sortear.sorteio
         @venceu = false
@@ -28,8 +28,7 @@ class AdivinharNumero
         end     
     end  
 
-    #função caso o jogador queira jogar novamente
-    def jogarNovamente
+    def jogar_novamente
         @numero = Sortear.sorteio
         @venceu = false
     end
