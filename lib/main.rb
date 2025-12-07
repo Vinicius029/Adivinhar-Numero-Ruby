@@ -42,7 +42,7 @@ class Main
     end
 
     def render_play
-        system('cls')
+        system(Gem.win_platform? ? 'cls' : 'clear')
         Rendering.animacao(Rendering::INPUT_OPTION::PLAY)
         puts 'Digite um Numero entre 1 a 30:'
         gets.chomp.to_i
